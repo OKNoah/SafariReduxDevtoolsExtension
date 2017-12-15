@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Author</key>
+	<string>Noah Gray</string>
+	<key>Builder Version</key>
+	<string>13604.3.5</string>
+	<key>CFBundleDisplayName</key>
+	<string>ReduxDevTools</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.rainycode.reduxdevtools</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0</string>
+	<key>CFBundleVersion</key>
+	<string>1</string>
+	<key>Chrome</key>
+	<dict>
+		<key>Database Quota</key>
+		<integer>52428800</integer>
+		<key>Global Page</key>
+		<string>index.html</string>
+		<key>Toolbar Items</key>
+		<array>
+			<dict>
+				<key>Command</key>
+				<string>toggle-devtools</string>
+				<key>Identifier</key>
+				<string>DevTools</string>
+				<key>Image</key>
+				<string>AppIcon.appiconset/logo-2-128.png</string>
+				<key>Include By Default</key>
+				<true/>
+				<key>Label</key>
+				<string>DevTools</string>
+				<key>Palette Label</key>
+				<string>DevTools</string>
+				<key>Tool Tip</key>
+				<string>DevTools</string>
+			</dict>
+		</array>
+	</dict>
+	<key>Content</key>
+	<dict>
+		<key>Scripts</key>
+		<dict>
+			<key>End</key>
+			<array>
+				<string>index.js</string>
+			</array>
+		</dict>
+	</dict>
+	<key>Description</key>
+	<string>Show redux log from remote-redux-devtools</string>
+	<key>DeveloperIdentifier</key>
+	<string>NX589645Y6</string>
+	<key>ExtensionInfoDictionaryVersion</key>
+	<string>1.0</string>
+	<key>Permissions</key>
+	<dict>
+		<key>Website Access</key>
+		<dict>
+			<key>Allowed Domains</key>
+			<array>
+				<string>localhost</string>
+			</array>
+			<key>Level</key>
+			<string>Some</string>
+		</dict>
+	</dict>
+	<key>Website</key>
+	<string>https://github.com/oknoah</string>
+</dict>
+</plist>

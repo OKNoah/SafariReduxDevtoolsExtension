@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script type="text/javascript">
+    function relayMessage (msg) {
+      safari.self.tab.dispatchMessage(msg)
+    }
+
+    safari.application.addEventListener('command', relayMessage, false)
+  </script>
+</head>
+<body>
+</body>
+</html>
