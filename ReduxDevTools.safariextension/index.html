@@ -2,8 +2,8 @@
 <html>
 <head>
   <script type="text/javascript">
-    function relayMessage (msg) {
-      safari.self.tab.dispatchMessage(msg)
+    function relayMessage (event) {
+      safari.application.activeBrowserWindow.activeTab.page.dispatchMessage('commeand', event.command)
     }
 
     safari.application.addEventListener('command', relayMessage, false)

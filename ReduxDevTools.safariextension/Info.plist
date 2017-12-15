@@ -32,7 +32,7 @@
 				<key>Image</key>
 				<string>AppIcon.appiconset/logo-2-128.png</string>
 				<key>Include By Default</key>
-				<true/>
+				<false/>
 				<key>Label</key>
 				<string>DevTools</string>
 				<key>Palette Label</key>
