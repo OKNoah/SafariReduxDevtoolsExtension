@@ -1,4 +1,4 @@
-// import request from 'superagent'
+import { autobind } from 'core-decorators'
 
 const defaultAttributes = {
   src: 'http://localhost:3001',
@@ -14,6 +14,7 @@ const defaultAttributes = {
 
 class SafariDevTools {
   constructor (attributes = defaultAttributes) {
+    this.attributes = attributes
     this.frame = document.createElement('iframe')
 
     for (let attribute in attributes) {
@@ -29,27 +30,30 @@ class SafariDevTools {
     }
   }
 
-  eventHandler (event) {
-    console.log('event', event)
-    switch (event) {
-      case 'toggle-devtools':
-        this.remove()
-        break;
+  append () {
+    const element = document.querySelector(`#${this.attributes.id}`)
+
+    if (!element) {
+      document.body.append(this.frame)
     }
   }
 
-  append () {
-    document.body.append(this.frame)
+  removeFrame () {
+    const element = document.querySelector(`#${this.attributes.id}`)
+    element.remove()
   }
 
-  remove() {
-    console.log('removing')
-    delete this.frame.ref
+  @autobind
+  eventHandler (message) {
+    const element = document.querySelector(`#${this.attributes.id}`)
+    if (element) {
+      return this.removeFrame()
+    }
+
+    this.append()
   }
 }
 
 const devTools = new SafariDevTools()
-
-devTools.append()
 
 safari.self.addEventListener("message", devTools.eventHandler, false)

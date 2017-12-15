@@ -17,12 +17,13 @@
     "@babel/preset-env": "^7.0.0-beta.34",
     "@babel/preset-stage-0": "^7.0.0-beta.34",
     "@babel/runtime": "^7.0.0-beta.34",
-    "webpack": "^3.10.0"
-  },
-  "dependencies": {
     "babel-eslint": "^8.0.3",
     "babel-loader": "^8.0.0-beta.0",
     "eslint": "^4.13.1",
+    "webpack": "^3.10.0"
+  },
+  "dependencies": {
+    "core-decorators": "^0.20.0",
     "superagent": "^3.8.2"
   }
 }
